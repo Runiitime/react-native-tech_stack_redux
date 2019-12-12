@@ -1,0 +1,16 @@
+import {LayoutAnimation, UIManager} from 'react-native'
+
+const CONFIG = {
+  duration: 300,
+  create: {
+    type: LayoutAnimation.Types.linear,
+    property: LayoutAnimation.Properties.opacity
+  },
+  update: {
+    type: LayoutAnimation.Types.easeInEaseOut
+  }
+}
+
+export const animate = () => {
+  LayoutAnimation.configureNext(CONFIG)
+}
